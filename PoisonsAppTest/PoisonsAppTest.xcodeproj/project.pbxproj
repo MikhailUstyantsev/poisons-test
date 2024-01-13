@@ -9,21 +9,45 @@
 /* Begin PBXBuildFile section */
 		83DDC0D02B524A81007630BF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83DDC0CF2B524A81007630BF /* AppDelegate.swift */; };
 		83DDC0D22B524A81007630BF /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83DDC0D12B524A81007630BF /* SceneDelegate.swift */; };
-		83DDC0D42B524A81007630BF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83DDC0D32B524A81007630BF /* ViewController.swift */; };
-		83DDC0D72B524A81007630BF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 83DDC0D52B524A81007630BF /* Main.storyboard */; };
+		83DDC0D42B524A81007630BF /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83DDC0D32B524A81007630BF /* SearchViewController.swift */; };
 		83DDC0D92B524A82007630BF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 83DDC0D82B524A82007630BF /* Assets.xcassets */; };
 		83DDC0DC2B524A82007630BF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 83DDC0DA2B524A82007630BF /* LaunchScreen.storyboard */; };
+		83DDC0E82B52591C007630BF /* BaseController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83DDC0E62B52591C007630BF /* BaseController.swift */; };
+		83DDC0E92B52591C007630BF /* BaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83DDC0E72B52591C007630BF /* BaseView.swift */; };
+		83DDC0F22B525943007630BF /* UISearchBar + ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83DDC0EB2B525943007630BF /* UISearchBar + ext.swift */; };
+		83DDC0F52B525943007630BF /* UIImage + ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83DDC0EE2B525943007630BF /* UIImage + ext.swift */; };
+		83DDC0F62B525943007630BF /* UIColor + ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83DDC0EF2B525943007630BF /* UIColor + ext.swift */; };
+		83DDC0F72B525943007630BF /* Error + ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83DDC0F02B525943007630BF /* Error + ext.swift */; };
+		83DDC0F82B525943007630BF /* UIView + ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83DDC0F12B525943007630BF /* UIView + ext.swift */; };
+		83DDC0FA2B525957007630BF /* Resources.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83DDC0F92B525957007630BF /* Resources.swift */; };
+		83DDC0FF2B530426007630BF /* Poison.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83DDC0FE2B530426007630BF /* Poison.swift */; };
+		83DDC1022B530D2C007630BF /* PoisonCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83DDC1012B530D2C007630BF /* PoisonCollectionViewCell.swift */; };
+		83DDC1052B530EE0007630BF /* SF-Pro-Display-Semibold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 83DDC1042B530EE0007630BF /* SF-Pro-Display-Semibold.otf */; };
+		83DDC1072B530EF2007630BF /* SF-Pro-Display-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 83DDC1062B530EF2007630BF /* SF-Pro-Display-Regular.otf */; };
+		83DDC1092B531181007630BF /* SF-Pro-Display-Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = 83DDC1082B531181007630BF /* SF-Pro-Display-Light.otf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		83DDC0CC2B524A81007630BF /* PoisonsAppTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PoisonsAppTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		83DDC0CF2B524A81007630BF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		83DDC0D12B524A81007630BF /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		83DDC0D32B524A81007630BF /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		83DDC0D62B524A81007630BF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		83DDC0D32B524A81007630BF /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		83DDC0D82B524A82007630BF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		83DDC0DB2B524A82007630BF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		83DDC0DD2B524A82007630BF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		83DDC0E62B52591C007630BF /* BaseController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseController.swift; sourceTree = "<group>"; };
+		83DDC0E72B52591C007630BF /* BaseView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseView.swift; sourceTree = "<group>"; };
+		83DDC0EB2B525943007630BF /* UISearchBar + ext.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UISearchBar + ext.swift"; sourceTree = "<group>"; };
+		83DDC0EE2B525943007630BF /* UIImage + ext.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImage + ext.swift"; sourceTree = "<group>"; };
+		83DDC0EF2B525943007630BF /* UIColor + ext.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor + ext.swift"; sourceTree = "<group>"; };
+		83DDC0F02B525943007630BF /* Error + ext.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Error + ext.swift"; sourceTree = "<group>"; };
+		83DDC0F12B525943007630BF /* UIView + ext.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView + ext.swift"; sourceTree = "<group>"; };
+		83DDC0F92B525957007630BF /* Resources.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Resources.swift; sourceTree = "<group>"; };
+		83DDC0FE2B530426007630BF /* Poison.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Poison.swift; sourceTree = "<group>"; };
+		83DDC1012B530D2C007630BF /* PoisonCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PoisonCollectionViewCell.swift; sourceTree = "<group>"; };
+		83DDC1042B530EE0007630BF /* SF-Pro-Display-Semibold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Display-Semibold.otf"; sourceTree = "<group>"; };
+		83DDC1062B530EF2007630BF /* SF-Pro-Display-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Display-Regular.otf"; sourceTree = "<group>"; };
+		83DDC1082B531181007630BF /* SF-Pro-Display-Light.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Display-Light.otf"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,15 +80,99 @@
 		83DDC0CE2B524A81007630BF /* PoisonsAppTest */ = {
 			isa = PBXGroup;
 			children = (
+				83DDC0E32B5257B7007630BF /* Application */,
+				83DDC0FB2B5259F2007630BF /* SearchModule */,
+				83DDC0FD2B530426007630BF /* APIModel */,
+				83DDC0E42B52581E007630BF /* SupportingFiles */,
+				83DDC0EA2B525943007630BF /* Extensions */,
+				83DDC0E52B52591C007630BF /* Base */,
+			);
+			path = PoisonsAppTest;
+			sourceTree = "<group>";
+		};
+		83DDC0E32B5257B7007630BF /* Application */ = {
+			isa = PBXGroup;
+			children = (
 				83DDC0CF2B524A81007630BF /* AppDelegate.swift */,
 				83DDC0D12B524A81007630BF /* SceneDelegate.swift */,
-				83DDC0D32B524A81007630BF /* ViewController.swift */,
-				83DDC0D52B524A81007630BF /* Main.storyboard */,
+			);
+			path = Application;
+			sourceTree = "<group>";
+		};
+		83DDC0E42B52581E007630BF /* SupportingFiles */ = {
+			isa = PBXGroup;
+			children = (
+				83DDC1032B530EC9007630BF /* Fonts */,
+				83DDC0F92B525957007630BF /* Resources.swift */,
 				83DDC0D82B524A82007630BF /* Assets.xcassets */,
 				83DDC0DA2B524A82007630BF /* LaunchScreen.storyboard */,
 				83DDC0DD2B524A82007630BF /* Info.plist */,
 			);
-			path = PoisonsAppTest;
+			path = SupportingFiles;
+			sourceTree = "<group>";
+		};
+		83DDC0E52B52591C007630BF /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				83DDC0E62B52591C007630BF /* BaseController.swift */,
+				83DDC0E72B52591C007630BF /* BaseView.swift */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+		83DDC0EA2B525943007630BF /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				83DDC0EB2B525943007630BF /* UISearchBar + ext.swift */,
+				83DDC0EE2B525943007630BF /* UIImage + ext.swift */,
+				83DDC0EF2B525943007630BF /* UIColor + ext.swift */,
+				83DDC0F02B525943007630BF /* Error + ext.swift */,
+				83DDC0F12B525943007630BF /* UIView + ext.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		83DDC0FB2B5259F2007630BF /* SearchModule */ = {
+			isa = PBXGroup;
+			children = (
+				83DDC0FC2B5259FF007630BF /* View */,
+			);
+			path = SearchModule;
+			sourceTree = "<group>";
+		};
+		83DDC0FC2B5259FF007630BF /* View */ = {
+			isa = PBXGroup;
+			children = (
+				83DDC0D32B524A81007630BF /* SearchViewController.swift */,
+				83DDC1002B530CFF007630BF /* Cells */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		83DDC0FD2B530426007630BF /* APIModel */ = {
+			isa = PBXGroup;
+			children = (
+				83DDC0FE2B530426007630BF /* Poison.swift */,
+			);
+			path = APIModel;
+			sourceTree = "<group>";
+		};
+		83DDC1002B530CFF007630BF /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				83DDC1012B530D2C007630BF /* PoisonCollectionViewCell.swift */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		83DDC1032B530EC9007630BF /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				83DDC1042B530EE0007630BF /* SF-Pro-Display-Semibold.otf */,
+				83DDC1062B530EF2007630BF /* SF-Pro-Display-Regular.otf */,
+				83DDC1082B531181007630BF /* SF-Pro-Display-Light.otf */,
+			);
+			path = Fonts;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -125,9 +233,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				83DDC1052B530EE0007630BF /* SF-Pro-Display-Semibold.otf in Resources */,
+				83DDC1092B531181007630BF /* SF-Pro-Display-Light.otf in Resources */,
 				83DDC0DC2B524A82007630BF /* LaunchScreen.storyboard in Resources */,
+				83DDC1072B530EF2007630BF /* SF-Pro-Display-Regular.otf in Resources */,
 				83DDC0D92B524A82007630BF /* Assets.xcassets in Resources */,
-				83DDC0D72B524A81007630BF /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -138,23 +248,25 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				83DDC0D42B524A81007630BF /* ViewController.swift in Sources */,
+				83DDC0D42B524A81007630BF /* SearchViewController.swift in Sources */,
 				83DDC0D02B524A81007630BF /* AppDelegate.swift in Sources */,
+				83DDC1022B530D2C007630BF /* PoisonCollectionViewCell.swift in Sources */,
+				83DDC0F72B525943007630BF /* Error + ext.swift in Sources */,
+				83DDC0E92B52591C007630BF /* BaseView.swift in Sources */,
+				83DDC0F62B525943007630BF /* UIColor + ext.swift in Sources */,
+				83DDC0E82B52591C007630BF /* BaseController.swift in Sources */,
 				83DDC0D22B524A81007630BF /* SceneDelegate.swift in Sources */,
+				83DDC0FF2B530426007630BF /* Poison.swift in Sources */,
+				83DDC0F52B525943007630BF /* UIImage + ext.swift in Sources */,
+				83DDC0F82B525943007630BF /* UIView + ext.swift in Sources */,
+				83DDC0F22B525943007630BF /* UISearchBar + ext.swift in Sources */,
+				83DDC0FA2B525957007630BF /* Resources.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		83DDC0D52B524A81007630BF /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				83DDC0D62B524A81007630BF /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		83DDC0DA2B524A82007630BF /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -289,12 +401,11 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 2R32CKST38;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = PoisonsAppTest/Info.plist;
+				INFOPLIST_FILE = PoisonsAppTest/SupportingFiles/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -302,6 +413,9 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = mikhail.ustyantsev.PoisonsAppTest;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -317,12 +431,11 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 2R32CKST38;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = PoisonsAppTest/Info.plist;
+				INFOPLIST_FILE = PoisonsAppTest/SupportingFiles/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -330,6 +443,9 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = mikhail.ustyantsev.PoisonsAppTest;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
