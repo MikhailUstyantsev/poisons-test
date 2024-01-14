@@ -9,19 +9,31 @@ import UIKit
 
 final class SearchViewController: BaseController {
     
+    enum Section {
+      case main
+    }
+    
+    typealias DataSource = UICollectionViewDiffableDataSource<Section, Poison>
+    typealias Snapshot = NSDiffableDataSourceSnapshot<Section, Poison>
+    
     //MARK: - Properties
     private let searchBar = UISearchBar()
-    
+    var presenter: SearchPresenterOutputProtocol?
+   
     private let collectionView: UICollectionView = {
         let layout = UICollectionViewFlowLayout()
-        layout.minimumInteritemSpacing = 15
-        layout.minimumLineSpacing = 15
         let collectionView = UICollectionView(frame: .zero, collectionViewLayout: layout)
-        collectionView.register(PoisonCollectionViewCell.self, forCellWithReuseIdentifier: String(describing: PoisonCollectionViewCell.self))
         return collectionView
     }()
     
-   //MARK: - Search Button handler
+    private lazy var collectionDataSource = makeDataSource()
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        presenter?.loadPoisons()
+    }
+    
+    //MARK: - Search Button handler
     override func navBarRightButtonHandler() {
         search(shouldShow: true)
     }
@@ -58,8 +70,46 @@ final class SearchViewController: BaseController {
         searchBar.alpha = 0.0
         searchBar.delegate = self
         searchBar.sizeToFit()
+        searchBar.placeholder = R.Strings.searchTextFieldPlaceholder
         searchBar.clearBackgroundColor()
         searchBar.textField?.backgroundColor = .systemBackground
+    }
+    
+    private func configureCollectionView() {
+        collectionView.delegate = self
+        collectionView.register(PoisonCollectionViewCell.self, forCellWithReuseIdentifier: String(describing: PoisonCollectionViewCell.self))
+    }
+    
+    // MARK: - Functions
+    private func makeDataSource() -> DataSource {
+      let dataSource = DataSource(
+        collectionView: collectionView,
+        cellProvider: { (collectionView, indexPath, poison) ->
+          UICollectionViewCell? in
+         
+          let cell = collectionView.dequeueReusableCell(
+            withReuseIdentifier: String(describing: PoisonCollectionViewCell.self),
+            for: indexPath) as? PoisonCollectionViewCell
+            cell?.poison = poison
+          return cell
+      })
+      return dataSource
+    }
+    
+    private func applySnapshot(with poisons: Poisons, animatingDifferences: Bool = true) {
+        var snapshot = Snapshot()
+        snapshot.appendSections([.main])
+        snapshot.appendItems(poisons)
+        collectionDataSource.apply(snapshot, animatingDifferences: animatingDifferences)
+    }
+    
+    private func filteredPoisons(with filter: String?) -> Poisons {
+        return presenter?.poisons.filter { $0.contains(filter) } ?? []
+    }
+    
+    private func performQuery(with filter: String?) {
+        let poisons = filteredPoisons(with: filter).sorted { $0.name < $1.name }
+        applySnapshot(with: poisons)
     }
 }
 
@@ -77,21 +127,71 @@ extension  SearchViewController {
             addNavBarButton(at: .left, with: back)
         }
         configureSearchBar()
+        configureCollectionView()
         showSearchBarButton(shouldShow: true)
     }
     
     override func constraintViews() {
         super.constraintViews()
+        let margins = view.safeAreaLayoutGuide
+        let topOffset: CGFloat = 24
+        let sideOffset: CGFloat = 16
         NSLayoutConstraint.activate([
-         
+            collectionView.topAnchor.constraint(equalTo: margins.topAnchor, constant: topOffset),
+            collectionView.bottomAnchor.constraint(equalTo: margins.bottomAnchor),
+            collectionView.leadingAnchor.constraint(equalTo: margins.leadingAnchor, constant: sideOffset),
+            collectionView.trailingAnchor.constraint(equalTo: margins.trailingAnchor, constant: -sideOffset),
         ])
     }
 }
-    //MARK: - SearchBarDelegate
+//MARK: - SearchBarDelegate
 
 extension SearchViewController: UISearchBarDelegate {
     
     func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
         search(shouldShow: false)
+    }
+    
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        performQuery(with: searchText)
+    }
+}
+
+
+extension SearchViewController: SearchPresenterInputProtocol {
+    
+    func poisonsLoaded(poisons: Poisons) {
+        applySnapshot(with: poisons)
+    }
+    
+    func loader(show: Bool) {
+        
+    }
+    
+    func showErrorAlert() {
+        
+    }
+}
+
+extension SearchViewController: UICollectionViewDelegate {
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        guard let poison = collectionDataSource.itemIdentifier(for: indexPath) else { return }
+        print(poison.name)
+    }
+}
+
+extension SearchViewController: UICollectionViewDelegateFlowLayout {
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        return CGSize(width: (view.frame.width - 47) / 2, height: 292)
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
+        return 15
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
+        return 15
     }
 }

@@ -15,7 +15,7 @@ enum R {
     }
     
     enum Strings {
-        
+        static let searchTextFieldPlaceholder = "Поиск препарата"
     }
     
     enum Images {
@@ -37,11 +37,9 @@ enum R {
         }
     }
     
-    enum Methods {
+    enum Paths {
         
-        enum GetRequests {
-            static let imagesSearch = "images/search"
-        }
+            static let poisonsList = "index"
     }
     
     enum Fonts {

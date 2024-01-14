@@ -1,0 +1,6 @@
+framework module Pods_PoisonsAppTest {
+  umbrella header "Pods-PoisonsAppTest-umbrella.h"
+
+  export *
+  module * { export * }
+}
