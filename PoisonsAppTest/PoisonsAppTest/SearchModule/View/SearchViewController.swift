@@ -177,14 +177,14 @@ extension SearchViewController: UICollectionViewDelegate {
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         guard let poison = collectionDataSource.itemIdentifier(for: indexPath) else { return }
-        print(poison.name)
+        presenter?.tapOnPoison(poison: poison)
     }
 }
 
 extension SearchViewController: UICollectionViewDelegateFlowLayout {
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: (view.frame.width - 47) / 2, height: 292)
+        return CGSize(width: (view.frame.width - 47) / 2, height: 270)
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {

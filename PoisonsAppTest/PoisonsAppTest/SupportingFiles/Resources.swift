@@ -16,6 +16,7 @@ enum R {
     
     enum Strings {
         static let searchTextFieldPlaceholder = "Поиск препарата"
+        static let shansBaseURL = "http://shans.d2.i-partner.ru"
     }
     
     enum Images {

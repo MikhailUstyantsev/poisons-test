@@ -12,6 +12,10 @@
 		832F4A832B53A16E00BFAB64 /* ModuleBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 832F4A822B53A16E00BFAB64 /* ModuleBuilder.swift */; };
 		832F4A872B53A30800BFAB64 /* SearchPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 832F4A862B53A30800BFAB64 /* SearchPresenter.swift */; };
 		832F4A892B53A31700BFAB64 /* SearchPresenterIO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 832F4A882B53A31700BFAB64 /* SearchPresenterIO.swift */; };
+		83658C692B5573FD00910EFE /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83658C682B5573FD00910EFE /* DetailViewController.swift */; };
+		83658C6C2B55772A00910EFE /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83658C6B2B55772A00910EFE /* DetailView.swift */; };
+		83658C6E2B5578BE00910EFE /* DetailPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83658C6D2B5578BE00910EFE /* DetailPresenter.swift */; };
+		83658C712B5578EC00910EFE /* DetailPresenterIO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83658C702B5578EC00910EFE /* DetailPresenterIO.swift */; };
 		83DDC0D02B524A81007630BF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83DDC0CF2B524A81007630BF /* AppDelegate.swift */; };
 		83DDC0D22B524A81007630BF /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83DDC0D12B524A81007630BF /* SceneDelegate.swift */; };
 		83DDC0D42B524A81007630BF /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83DDC0D32B524A81007630BF /* SearchViewController.swift */; };
@@ -41,6 +45,10 @@
 		832F4A822B53A16E00BFAB64 /* ModuleBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModuleBuilder.swift; sourceTree = "<group>"; };
 		832F4A862B53A30800BFAB64 /* SearchPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchPresenter.swift; sourceTree = "<group>"; };
 		832F4A882B53A31700BFAB64 /* SearchPresenterIO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchPresenterIO.swift; sourceTree = "<group>"; };
+		83658C682B5573FD00910EFE /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		83658C6B2B55772A00910EFE /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
+		83658C6D2B5578BE00910EFE /* DetailPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailPresenter.swift; sourceTree = "<group>"; };
+		83658C702B5578EC00910EFE /* DetailPresenterIO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailPresenterIO.swift; sourceTree = "<group>"; };
 		83DDC0CC2B524A81007630BF /* PoisonsAppTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PoisonsAppTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		83DDC0CF2B524A81007630BF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		83DDC0D12B524A81007630BF /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -117,6 +125,41 @@
 			path = Presenter;
 			sourceTree = "<group>";
 		};
+		83658C662B5573B700910EFE /* DetailModule */ = {
+			isa = PBXGroup;
+			children = (
+				83658C6F2B5578C400910EFE /* Presenter */,
+				83658C672B5573DF00910EFE /* View */,
+			);
+			path = DetailModule;
+			sourceTree = "<group>";
+		};
+		83658C672B5573DF00910EFE /* View */ = {
+			isa = PBXGroup;
+			children = (
+				83658C682B5573FD00910EFE /* DetailViewController.swift */,
+				83658C6A2B5576F400910EFE /* Components */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		83658C6A2B5576F400910EFE /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				83658C6B2B55772A00910EFE /* DetailView.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		83658C6F2B5578C400910EFE /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				83658C702B5578EC00910EFE /* DetailPresenterIO.swift */,
+				83658C6D2B5578BE00910EFE /* DetailPresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
 		83DDC0C32B524A81007630BF = {
 			isa = PBXGroup;
 			children = (
@@ -142,6 +185,7 @@
 				832F4A842B53A17400BFAB64 /* ModuleBuilder */,
 				83DDC0E32B5257B7007630BF /* Application */,
 				83DDC0FB2B5259F2007630BF /* SearchModule */,
+				83658C662B5573B700910EFE /* DetailModule */,
 				832F4A7C2B5399F600BFAB64 /* API */,
 				83DDC0FD2B530426007630BF /* APIModel */,
 				83DDC0E42B52581E007630BF /* SupportingFiles */,
@@ -206,7 +250,7 @@
 			isa = PBXGroup;
 			children = (
 				83DDC0D32B524A81007630BF /* SearchViewController.swift */,
-				83DDC1002B530CFF007630BF /* Cells */,
+				83DDC1002B530CFF007630BF /* Components */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -219,12 +263,12 @@
 			path = APIModel;
 			sourceTree = "<group>";
 		};
-		83DDC1002B530CFF007630BF /* Cells */ = {
+		83DDC1002B530CFF007630BF /* Components */ = {
 			isa = PBXGroup;
 			children = (
 				83DDC1012B530D2C007630BF /* PoisonCollectionViewCell.swift */,
 			);
-			path = Cells;
+			path = Components;
 			sourceTree = "<group>";
 		};
 		83DDC1032B530EC9007630BF /* Fonts */ = {
@@ -243,7 +287,6 @@
 				06CE72C85D33DA42E08E7031 /* Pods-PoisonsAppTest.debug.xcconfig */,
 				5FEF6A1C0671670F4D0721A8 /* Pods-PoisonsAppTest.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -369,13 +412,17 @@
 				83DDC0D02B524A81007630BF /* AppDelegate.swift in Sources */,
 				83DDC1022B530D2C007630BF /* PoisonCollectionViewCell.swift in Sources */,
 				83DDC0F72B525943007630BF /* Error + ext.swift in Sources */,
+				83658C6E2B5578BE00910EFE /* DetailPresenter.swift in Sources */,
 				83DDC0E92B52591C007630BF /* BaseView.swift in Sources */,
 				83DDC0F62B525943007630BF /* UIColor + ext.swift in Sources */,
 				832F4A812B53A04B00BFAB64 /* Router.swift in Sources */,
 				83DDC0E82B52591C007630BF /* BaseController.swift in Sources */,
 				83DDC0D22B524A81007630BF /* SceneDelegate.swift in Sources */,
+				83658C692B5573FD00910EFE /* DetailViewController.swift in Sources */,
 				832F4A892B53A31700BFAB64 /* SearchPresenterIO.swift in Sources */,
+				83658C712B5578EC00910EFE /* DetailPresenterIO.swift in Sources */,
 				83DDC0FF2B530426007630BF /* Poison.swift in Sources */,
+				83658C6C2B55772A00910EFE /* DetailView.swift in Sources */,
 				832F4A832B53A16E00BFAB64 /* ModuleBuilder.swift in Sources */,
 				83DDC0F52B525943007630BF /* UIImage + ext.swift in Sources */,
 				83DDC0F82B525943007630BF /* UIView + ext.swift in Sources */,

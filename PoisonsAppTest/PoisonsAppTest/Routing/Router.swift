@@ -15,6 +15,8 @@ protocol Router {
 protocol RouterProtocol: Router {
     
     func initialViewController()
+    func showDetailViewController(poison: Poison?)
+    func popToRoot()
 }
 
 final class AppRouter: RouterProtocol {
@@ -31,6 +33,19 @@ final class AppRouter: RouterProtocol {
         if let navigationController = navigationController {
             guard let searchViewController = builder?.createSearchScreen(router: self) else { return }
             navigationController.viewControllers = [searchViewController]
+        }
+    }
+    
+    func showDetailViewController(poison: Poison?) {
+        if let navigationController = navigationController {
+            guard let detailViewController = builder?.createDetailScreen(router: self, poison: poison) else { return }
+            navigationController.pushViewController(detailViewController, animated: true)
+        }
+    }
+    
+    func popToRoot() {
+        if let navigationController = navigationController {
+            navigationController.popToRootViewController(animated: true)
         }
     }
 }

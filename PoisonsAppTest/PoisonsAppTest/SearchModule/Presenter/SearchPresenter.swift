@@ -41,6 +41,6 @@ final class SearchPresenter: SearchPresenterOutputProtocol {
     }
     
     func tapOnPoison(poison: Poison?) {
-        //router shows detailed view
+        router?.showDetailViewController(poison: poison)
     }  
 }

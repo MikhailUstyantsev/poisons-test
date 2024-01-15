@@ -12,6 +12,7 @@ import UIKit
 protocol Builder {
     
     func createSearchScreen(router: RouterProtocol) -> UIViewController
+    func createDetailScreen(router: RouterProtocol, poison: Poison?) -> UIViewController
 }
 
 final class ModuleBuilder: Builder {
@@ -23,6 +24,18 @@ final class ModuleBuilder: Builder {
             view: view,
             networkManager: networkManager,
             router: router)
+        view.presenter = presenter
+        return view
+    }
+    
+    func createDetailScreen(router: RouterProtocol, poison: Poison?) -> UIViewController {
+        let view = DetailViewController()
+        let networkManager = NetworkManager()
+        let presenter = DetailPresenter(
+            view: view,
+            networkManager: networkManager,
+            router: router,
+            poison: poison)
         view.presenter = presenter
         return view
     }
