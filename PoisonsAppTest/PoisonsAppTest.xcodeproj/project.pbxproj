@@ -16,6 +16,8 @@
 		83658C6C2B55772A00910EFE /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83658C6B2B55772A00910EFE /* DetailView.swift */; };
 		83658C6E2B5578BE00910EFE /* DetailPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83658C6D2B5578BE00910EFE /* DetailPresenter.swift */; };
 		83658C712B5578EC00910EFE /* DetailPresenterIO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83658C702B5578EC00910EFE /* DetailPresenterIO.swift */; };
+		83658C782B56F93500910EFE /* ImageContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83658C772B56F93500910EFE /* ImageContainer.swift */; };
+		83658C7A2B5714D900910EFE /* InfoContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83658C792B5714D900910EFE /* InfoContainer.swift */; };
 		83DDC0D02B524A81007630BF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83DDC0CF2B524A81007630BF /* AppDelegate.swift */; };
 		83DDC0D22B524A81007630BF /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83DDC0D12B524A81007630BF /* SceneDelegate.swift */; };
 		83DDC0D42B524A81007630BF /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83DDC0D32B524A81007630BF /* SearchViewController.swift */; };
@@ -49,6 +51,8 @@
 		83658C6B2B55772A00910EFE /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
 		83658C6D2B5578BE00910EFE /* DetailPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailPresenter.swift; sourceTree = "<group>"; };
 		83658C702B5578EC00910EFE /* DetailPresenterIO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailPresenterIO.swift; sourceTree = "<group>"; };
+		83658C772B56F93500910EFE /* ImageContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageContainer.swift; sourceTree = "<group>"; };
+		83658C792B5714D900910EFE /* InfoContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoContainer.swift; sourceTree = "<group>"; };
 		83DDC0CC2B524A81007630BF /* PoisonsAppTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PoisonsAppTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		83DDC0CF2B524A81007630BF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		83DDC0D12B524A81007630BF /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -146,6 +150,7 @@
 		83658C6A2B5576F400910EFE /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				83658C762B56F91700910EFE /* SubViews */,
 				83658C6B2B55772A00910EFE /* DetailView.swift */,
 			);
 			path = Components;
@@ -158,6 +163,15 @@
 				83658C6D2B5578BE00910EFE /* DetailPresenter.swift */,
 			);
 			path = Presenter;
+			sourceTree = "<group>";
+		};
+		83658C762B56F91700910EFE /* SubViews */ = {
+			isa = PBXGroup;
+			children = (
+				83658C772B56F93500910EFE /* ImageContainer.swift */,
+				83658C792B5714D900910EFE /* InfoContainer.swift */,
+			);
+			path = SubViews;
 			sourceTree = "<group>";
 		};
 		83DDC0C32B524A81007630BF = {
@@ -412,6 +426,7 @@
 				83DDC0D02B524A81007630BF /* AppDelegate.swift in Sources */,
 				83DDC1022B530D2C007630BF /* PoisonCollectionViewCell.swift in Sources */,
 				83DDC0F72B525943007630BF /* Error + ext.swift in Sources */,
+				83658C7A2B5714D900910EFE /* InfoContainer.swift in Sources */,
 				83658C6E2B5578BE00910EFE /* DetailPresenter.swift in Sources */,
 				83DDC0E92B52591C007630BF /* BaseView.swift in Sources */,
 				83DDC0F62B525943007630BF /* UIColor + ext.swift in Sources */,
@@ -421,6 +436,7 @@
 				83658C692B5573FD00910EFE /* DetailViewController.swift in Sources */,
 				832F4A892B53A31700BFAB64 /* SearchPresenterIO.swift in Sources */,
 				83658C712B5578EC00910EFE /* DetailPresenterIO.swift in Sources */,
+				83658C782B56F93500910EFE /* ImageContainer.swift in Sources */,
 				83DDC0FF2B530426007630BF /* Poison.swift in Sources */,
 				83658C6C2B55772A00910EFE /* DetailView.swift in Sources */,
 				832F4A832B53A16E00BFAB64 /* ModuleBuilder.swift in Sources */,

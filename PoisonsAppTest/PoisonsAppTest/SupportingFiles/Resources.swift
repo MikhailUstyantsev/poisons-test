@@ -20,7 +20,8 @@ enum R {
     }
     
     enum Images {
-        
+        static let dislike = UIImage(named: "starEmpty")
+        static let like = UIImage(named: "starFilled")
         static let searchImage = UIImage(systemName: "magnifyingglass")
         static let backArrow = UIImage(systemName: "chevron.backward")
     }

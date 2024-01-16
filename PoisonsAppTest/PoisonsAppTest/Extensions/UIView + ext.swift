@@ -26,7 +26,7 @@ extension UIView {
         case bottom
     }
     
-    func pinToSuperviewEdges(_ edges: [Edge] = [.top, .bottom, .left, .right], constant: CGFloat = 3) {
+    func pinToSuperviewEdges(_ edges: [Edge] = [.top, .bottom, .left, .right], constant: CGFloat = 0) {
         guard let superview = superview else { return }
         edges.forEach {
             switch $0 {

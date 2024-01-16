@@ -28,7 +28,9 @@ final class DetailViewController: BaseController {
 extension DetailViewController: DetailPresenterInputProtocol {
     
     func setPoison(poison: Poison?) {
-        //configure detailView
+        if let poison = poison {
+            detailView.configure(with: poison)
+        }
     }
 }
 
@@ -57,7 +59,6 @@ extension  DetailViewController {
             detailView.topAnchor.constraint(equalTo: margins.topAnchor, constant: topOffset),
             detailView.leadingAnchor.constraint(equalTo: margins.leadingAnchor, constant: sideOffset),
             detailView.trailingAnchor.constraint(equalTo: margins.trailingAnchor, constant: -sideOffset),
-            detailView.heightAnchor.constraint(equalToConstant: 350),
         ])
     }
 }
