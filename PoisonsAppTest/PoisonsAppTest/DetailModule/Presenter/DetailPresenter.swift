@@ -16,7 +16,7 @@ final class DetailPresenter: DetailPresenterOutputProtocol {
     var router: RouterProtocol?
     
     required init(view: DetailPresenterInputProtocol, networkManager: NetworkManagerProtocol,
-        router: RouterProtocol, poison: Poison?)
+                  router: RouterProtocol, poison: Poison?)
     {
         self.view = view
         self.networkManager = networkManager

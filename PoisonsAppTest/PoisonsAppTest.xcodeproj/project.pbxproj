@@ -26,7 +26,6 @@
 		83DDC0E82B52591C007630BF /* BaseController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83DDC0E62B52591C007630BF /* BaseController.swift */; };
 		83DDC0E92B52591C007630BF /* BaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83DDC0E72B52591C007630BF /* BaseView.swift */; };
 		83DDC0F22B525943007630BF /* UISearchBar + ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83DDC0EB2B525943007630BF /* UISearchBar + ext.swift */; };
-		83DDC0F52B525943007630BF /* UIImage + ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83DDC0EE2B525943007630BF /* UIImage + ext.swift */; };
 		83DDC0F62B525943007630BF /* UIColor + ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83DDC0EF2B525943007630BF /* UIColor + ext.swift */; };
 		83DDC0F72B525943007630BF /* Error + ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83DDC0F02B525943007630BF /* Error + ext.swift */; };
 		83DDC0F82B525943007630BF /* UIView + ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83DDC0F12B525943007630BF /* UIView + ext.swift */; };
@@ -63,7 +62,6 @@
 		83DDC0E62B52591C007630BF /* BaseController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseController.swift; sourceTree = "<group>"; };
 		83DDC0E72B52591C007630BF /* BaseView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseView.swift; sourceTree = "<group>"; };
 		83DDC0EB2B525943007630BF /* UISearchBar + ext.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UISearchBar + ext.swift"; sourceTree = "<group>"; };
-		83DDC0EE2B525943007630BF /* UIImage + ext.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImage + ext.swift"; sourceTree = "<group>"; };
 		83DDC0EF2B525943007630BF /* UIColor + ext.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor + ext.swift"; sourceTree = "<group>"; };
 		83DDC0F02B525943007630BF /* Error + ext.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Error + ext.swift"; sourceTree = "<group>"; };
 		83DDC0F12B525943007630BF /* UIView + ext.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView + ext.swift"; sourceTree = "<group>"; };
@@ -243,7 +241,6 @@
 			isa = PBXGroup;
 			children = (
 				83DDC0EB2B525943007630BF /* UISearchBar + ext.swift */,
-				83DDC0EE2B525943007630BF /* UIImage + ext.swift */,
 				83DDC0EF2B525943007630BF /* UIColor + ext.swift */,
 				83DDC0F02B525943007630BF /* Error + ext.swift */,
 				83DDC0F12B525943007630BF /* UIView + ext.swift */,
@@ -440,7 +437,6 @@
 				83DDC0FF2B530426007630BF /* Poison.swift in Sources */,
 				83658C6C2B55772A00910EFE /* DetailView.swift in Sources */,
 				832F4A832B53A16E00BFAB64 /* ModuleBuilder.swift in Sources */,
-				83DDC0F52B525943007630BF /* UIImage + ext.swift in Sources */,
 				83DDC0F82B525943007630BF /* UIView + ext.swift in Sources */,
 				832F4A872B53A30800BFAB64 /* SearchPresenter.swift in Sources */,
 				83DDC0F22B525943007630BF /* UISearchBar + ext.swift in Sources */,

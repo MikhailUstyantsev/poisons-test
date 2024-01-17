@@ -33,7 +33,7 @@ struct Field: Codable {
     let image: String?
     let flags: Flags
     let show, group: Int
-
+    
     enum CodingKeys: String, CodingKey {
         case typesID = "types_id"
         case type, name, value, image, flags, show, group
@@ -44,7 +44,7 @@ struct Field: Codable {
 struct Flags: Codable {
     let html, noValue, noName, noImage: Int
     let noWrap, noWrapName, system: Int
-
+    
     enum CodingKeys: String, CodingKey {
         case html
         case noValue = "no_value"
@@ -68,7 +68,7 @@ extension Poison: Hashable {
     public static func == (lhs: Poison, rhs: Poison) -> Bool {
         return lhs.id == rhs.id
     }
-
+    
     public func hash(into hasher: inout Hasher) {
         hasher.combine(id)
     }

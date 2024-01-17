@@ -10,7 +10,7 @@ import UIKit
 final class SearchViewController: BaseController {
     
     enum Section {
-      case main
+        case main
     }
     
     typealias DataSource = UICollectionViewDiffableDataSource<Section, Poison>
@@ -19,7 +19,7 @@ final class SearchViewController: BaseController {
     //MARK: - Properties
     private let searchBar = UISearchBar()
     var presenter: SearchPresenterOutputProtocol?
-   
+    
     private let collectionView: UICollectionView = {
         let layout = UICollectionViewFlowLayout()
         let collectionView = UICollectionView(frame: .zero, collectionViewLayout: layout)
@@ -82,18 +82,18 @@ final class SearchViewController: BaseController {
     
     // MARK: - Functions
     private func makeDataSource() -> DataSource {
-      let dataSource = DataSource(
-        collectionView: collectionView,
-        cellProvider: { (collectionView, indexPath, poison) ->
-          UICollectionViewCell? in
-         
-          let cell = collectionView.dequeueReusableCell(
-            withReuseIdentifier: String(describing: PoisonCollectionViewCell.self),
-            for: indexPath) as? PoisonCollectionViewCell
-            cell?.poison = poison
-          return cell
-      })
-      return dataSource
+        let dataSource = DataSource(
+            collectionView: collectionView,
+            cellProvider: { (collectionView, indexPath, poison) ->
+                UICollectionViewCell? in
+                
+                let cell = collectionView.dequeueReusableCell(
+                    withReuseIdentifier: String(describing: PoisonCollectionViewCell.self),
+                    for: indexPath) as? PoisonCollectionViewCell
+                cell?.poison = poison
+                return cell
+            })
+        return dataSource
     }
     
     private func applySnapshot(with poisons: Poisons, animatingDifferences: Bool = true) {

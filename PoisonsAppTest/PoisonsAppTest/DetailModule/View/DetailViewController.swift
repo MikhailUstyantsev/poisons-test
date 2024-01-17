@@ -59,6 +59,7 @@ extension  DetailViewController {
             detailView.topAnchor.constraint(equalTo: margins.topAnchor, constant: topOffset),
             detailView.leadingAnchor.constraint(equalTo: margins.leadingAnchor, constant: sideOffset),
             detailView.trailingAnchor.constraint(equalTo: margins.trailingAnchor, constant: -sideOffset),
+            detailView.bottomAnchor.constraint(equalTo: margins.bottomAnchor, constant: -sideOffset),
         ])
     }
 }

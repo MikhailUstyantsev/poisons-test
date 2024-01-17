@@ -11,7 +11,7 @@ import Kingfisher
 final class ImageContainer: BaseView {
     
     //MARK: - Properties
-    private var isLiked: Bool = false {
+    private var isLiked: Bool {
         didSet {
             if isLiked {
                 likeButton.setImage(R.Images.like, for: .normal)
@@ -39,6 +39,16 @@ final class ImageContainer: BaseView {
         }
     }
     
+    init(isLiked: Bool, poison: Poison? = nil) {
+        self.isLiked = isLiked
+        self.poison = poison
+        super.init(frame: .zero)
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
     //MARK: - Like Button handler
     @objc private func likeButtonTapped() {
         isLiked = !isLiked
@@ -53,12 +63,12 @@ extension ImageContainer {
         [iconImageView, poisonImageView, likeButton].forEach {
             stackView.addArrangedSubview($0)
         }
+        
         [iconImageView, poisonImageView].forEach {
             $0.contentMode = .scaleAspectFit
         }
         stackView.alignment = .top
         stackView.distribution = .fillProportionally
-        likeButton.addTarget(self, action: #selector(likeButtonTapped), for: .touchUpInside)
     }
     
     override func constraintViews() {
@@ -78,6 +88,8 @@ extension ImageContainer {
         iconImageView.layer.cornerRadius = iconImageView.layer.bounds.width / 2
         iconImageView.clipsToBounds = true
         isLiked = false
+        
+        likeButton.addTarget(self, action: #selector(likeButtonTapped), for: .touchUpInside)
     }
     
 }

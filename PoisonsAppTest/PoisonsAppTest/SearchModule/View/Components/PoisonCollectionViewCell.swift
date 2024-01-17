@@ -17,15 +17,15 @@ final class PoisonCollectionViewCell: UICollectionViewCell {
     let descriptionView = UITextView()
     
     var poison: Poison? {
-      didSet {
-          titleLabel.text = poison?.name.uppercased()
-          descriptionView.text = poison?.description
-          let urlString = R.Strings.shansBaseURL + (poison?.image ?? "")
-          guard let url = URL(string: urlString.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed) ?? "") else {
-              return
-          }
-          imageView.kf.setImage(with: url)
-      }
+        didSet {
+            titleLabel.text = poison?.name.uppercased()
+            descriptionView.text = poison?.description
+            let urlString = R.Strings.shansBaseURL + (poison?.image ?? "")
+            guard let url = URL(string: urlString.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed) ?? "") else {
+                return
+            }
+            imageView.kf.setImage(with: url)
+        }
     }
     
     override init(frame: CGRect) {
@@ -34,12 +34,12 @@ final class PoisonCollectionViewCell: UICollectionViewCell {
         configureAppearance()
         constraintViews()
     }
-
+    
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
         fatalError("Interface Builder is not supported!")
     }
-
+    
     override func prepareForReuse() {
         super.prepareForReuse()
         imageView.image = nil

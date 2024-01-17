@@ -15,12 +15,14 @@ enum R {
     }
     
     enum Strings {
+        static let whereToBuyTitle = "ГДЕ КУПИТЬ"
         static let searchTextFieldPlaceholder = "Поиск препарата"
         static let shansBaseURL = "http://shans.d2.i-partner.ru"
     }
     
     enum Images {
-        static let dislike = UIImage(named: "starEmpty")
+        static let pin = UIImage(named: "pin")
+        static let dislike = UIImage(named: "star")
         static let like = UIImage(named: "starFilled")
         static let searchImage = UIImage(systemName: "magnifyingglass")
         static let backArrow = UIImage(systemName: "chevron.backward")
@@ -29,19 +31,16 @@ enum R {
     enum Headers {
         
         enum Key {
-            
             static let contentType = "Content-Type"
         }
         
         enum Value {
-            
             static let applicationJson = "application/json"
         }
     }
     
     enum Paths {
-        
-            static let poisonsList = "index"
+        static let poisonsList = "index"
     }
     
     enum Fonts {
