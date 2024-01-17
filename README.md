@@ -11,17 +11,21 @@
 Отдельный слой для работы с API
 100% интерфейс UIKit (кодом)
 В качестве датасорса коллекции использован UICollectionViewDiffableDataSource
-__________
+_____________
 <div align="center">
   <img src="https://github.com/MikhailUstyantsev/poisons-test/blob/main/SearchDemo.gif" width="300px" />
 </div>
 <div align="center">
   Фильтрация результатов поиска
 </div>
-__________
+
+_____________
+
 <div align="center">
   <img src="https://github.com/MikhailUstyantsev/poisons-test/blob/main/DetailScreen.png" width="250"/>
 </div>
 <div align="center">
-  Детальный экран
+  <b>
+     Детальный экран
+  </b>
 </div>
