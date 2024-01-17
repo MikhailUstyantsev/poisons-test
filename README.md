@@ -16,7 +16,9 @@ _____________
   <img src="https://github.com/MikhailUstyantsev/poisons-test/blob/main/SearchDemo.gif" width="300px" />
 </div>
 <div align="center">
+  <b>
   Фильтрация результатов поиска
+    </b>
 </div>
 
 _____________
