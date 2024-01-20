@@ -44,7 +44,6 @@ extension InfoContainer {
         
         descriptionView.font = R.Fonts.sanFranciscoDisplayRegular(with: 15)
         descriptionView.numberOfLines = 0
-        descriptionView.isUserInteractionEnabled = false
         descriptionView.textColor = .label.withAlphaComponent(0.6)
         descriptionView.setContentHuggingPriority(.defaultLow - 1, for: .vertical)
         

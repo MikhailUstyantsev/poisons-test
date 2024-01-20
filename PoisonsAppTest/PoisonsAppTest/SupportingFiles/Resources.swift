@@ -15,6 +15,10 @@ enum R {
     }
     
     enum Strings {
+        static let error = "Ошибка"
+        static let loading = "Загрузка..."
+        static let waitABit = "Подождите немного"
+        static let done = "Готово"
         static let whereToBuyTitle = "ГДЕ КУПИТЬ"
         static let searchTextFieldPlaceholder = "Поиск препарата"
         static let shansBaseURL = "http://shans.d2.i-partner.ru"

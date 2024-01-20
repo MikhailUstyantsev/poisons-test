@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import JGProgressHUD
 
 final class SearchViewController: BaseController {
     
@@ -27,6 +28,7 @@ final class SearchViewController: BaseController {
     }()
     
     private lazy var collectionDataSource = makeDataSource()
+    let hud = JGProgressHUD()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -80,7 +82,7 @@ final class SearchViewController: BaseController {
         collectionView.register(PoisonCollectionViewCell.self, forCellWithReuseIdentifier: String(describing: PoisonCollectionViewCell.self))
     }
     
-    // MARK: - Functions
+    // MARK: - DataSource methods
     private func makeDataSource() -> DataSource {
         let dataSource = DataSource(
             collectionView: collectionView,
@@ -103,6 +105,7 @@ final class SearchViewController: BaseController {
         collectionDataSource.apply(snapshot, animatingDifferences: animatingDifferences)
     }
     
+    // MARK: - SearchBar filtering methods    
     private func filteredPoisons(with filter: String?) -> Poisons {
         return presenter?.poisons.filter { $0.contains(filter) } ?? []
     }
@@ -162,14 +165,25 @@ extension SearchViewController: SearchPresenterInputProtocol {
     
     func poisonsLoaded(poisons: Poisons) {
         applySnapshot(with: poisons)
+        hud.indicatorView = JGProgressHUDSuccessIndicatorView()
+        hud.textLabel.text = R.Strings.done
+        hud.detailTextLabel.text = nil
+        hud.dismiss(afterDelay: 1)
     }
     
     func loader(show: Bool) {
-        
+        if show {
+            hud.textLabel.text = R.Strings.loading
+            hud.detailTextLabel.text = R.Strings.waitABit
+            hud.show(in: view)
+        }
     }
     
     func showErrorAlert() {
-        
+        self.hud.indicatorView = JGProgressHUDErrorIndicatorView()
+        self.hud.textLabel.text = R.Strings.error
+        self.hud.detailTextLabel.text = nil
+        self.hud.dismiss(afterDelay: 1)
     }
 }
 

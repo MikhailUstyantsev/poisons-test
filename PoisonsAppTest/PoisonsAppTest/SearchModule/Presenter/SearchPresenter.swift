@@ -22,6 +22,7 @@ final class SearchPresenter: SearchPresenterOutputProtocol {
     }
     
     func loadPoisons() {
+        view?.loader(show: true)
         networkManager.getPoisons { [weak self] poisons, error in
             guard let self = self else { return }
             DispatchQueue.main.async {
@@ -37,10 +38,10 @@ final class SearchPresenter: SearchPresenterOutputProtocol {
     }
     
     func loadMorePoisons() {
-        //pagination goes here
+        //в настоящий момент API не поддерживает пагинацию - при смене offset приходят те же данные
     }
     
     func tapOnPoison(poison: Poison?) {
         router?.showDetailViewController(poison: poison)
-    }  
+    }
 }

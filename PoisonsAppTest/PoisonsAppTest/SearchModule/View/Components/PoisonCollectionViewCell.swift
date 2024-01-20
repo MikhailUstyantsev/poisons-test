@@ -6,7 +6,6 @@
 //
 
 import UIKit
-import JGProgressHUD
 import Kingfisher
 
 final class PoisonCollectionViewCell: UICollectionViewCell {
